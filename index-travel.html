@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelDeas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+<header>
+    <a href="#" class="traveldeas">TravelDeas</a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+        <div class="navigation-items">
+            <a href="C:\Users\pc\Desktop\CEREZO_ITC_Final_Project\index-travel.html">Home</a>
+            <a href="C:\Users\pc\Desktop\CEREZO_ITC_Final_Project\contact_page.html">Contact Us</a>
+            <a href="C:\Users\pc\Desktop\CEREZO_ITC_Final_Project\About_us.html">About us</a>
+            <a href="C:\Users\pc\Desktop\CEREZO_ITC_Final_Project\gallery.html">Gallery</a>
+            
+    </div>
+        </div>
+    </div>
+</header>
+
+<section class="home">
+  <video class="video-slide" src="italy.mp4" autoplay muted loop></video>
+  <video class="video-slide" src="sri-lanka.mp4" autoplay muted loop></video>
+  <video class="video-slide" src="portugal.mp4" autoplay muted loop></video>
+  <video class="video-slide" src="Japan.mp4" autoplay muted loop></video>
+  <video class="video-slide" src="greece.mp4" autoplay muted loop></video>
+  <div class="content active">
+    <h1>Italy</h1>
+    <p>Italy is a south-central European country, whose boot-shaped borders extend into the Mediterranean Sea. The country’s historical cities, world-renowned cuisine and geographic beauty make it a popular destination for more than 40 million tourists each year. The nation is home to Mount Etna, Europe’s tallest and most active volcano, and houses two countries within its borders – the Vatican and San Marino.</p>
+    <a href="C:\Users\pc\Desktop\CEREZO_ITC_Final_Project\italy_html.html">Read More</a>
+  </div>
+  <div class="content">
+    <h1>Sri-Lanka</h1>
+    <p>Sri Lanka is an island nation located in the Indian Ocean, just off the southeastern coast of India. Despite its modest size—slightly larger than the state of West Virginia—Sri Lanka has a population of about 20 million people, almost equal to the population of Texas.</p>
+    <a href="C:\Users\pc\Desktop\CEREZO_ITC_Final_Project\Sri_lanka.html">Read More</a>
+  </div>
+  <div class="content">
+    <h1>Portugal</h1>
+    <p>Portugal is a country in southern Europe, located on the Iberian Peninsula, bordering Spain. Home to over 10 million people, this country located on the shores of the Atlantic Ocean, has its Portuguese culture highly influenced by the inherent geographical advantages. It’s also the European country with the oldest borders.</p>
+    <a href="C:\Users\pc\Desktop\CEREZO_ITC_Final_Project\portugal.html">Read More</a>
+  </div>
+  <div class="content">
+    <h1>Japan</h1>
+    <p>Japan, one of the world’s most literate and technically advanced nations, is an East Asian archipelago country made up of four primary islands and more than 6,800 others. While most of Japan is covered by mountains and heavily wooded areas, the country’s people lead a distinctly urban lifestyle. Long culturally influenced by its neighbors, today the country blends its ancient traditions with aspects of Western life.</p>
+    <a href="C:\Users\pc\Desktop\CEREZO_ITC_Final_Project\japan.html">Read More</a>
+  </div>
+  <div class="content">
+    <h1>Greece</h1>
+    <p>Greece has the longest coastline in Europe and is the southernmost country in Europe. The mainland has rugged mountains, forests, and lakes, but the country is well known for the thousands of islands dotting the blue Aegean Sea to the east, the Mediterranean Sea to the south, and the Ionian Sea to the west.</p>
+    <a href="C:\Users\pc\Desktop\CEREZO_ITC_Final_Project\greece.html">Read More</a>
+  </div>
+  <div class="media-class">
+    <a href="https://www.facebook.com/Travel-ideas-108679774239484"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/travelandleisure/?hl=en"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com/travel"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="slider-navigation">
+    <div class="nav-btn active"></div>
+    <div class="nav-btn"></div>
+    <div class="nav-btn"></div>
+    <div class="nav-btn"></div>
+    <div class="nav-btn"></div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  //javascript of responsive navigation menu
+  const menuBtn = document.querySelector(".menu-btn");
+  const navigation = document.querySelector(".navigation");
+
+  menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    navigation.classList.toggle("active");
+  });
+
+  //Javascript for video slider navigation
+  const btns = document.querySelectorAll(".nav-btn");
+  const slides = document.querySelectorAll(".video-slide");
+  const contents = document.querySelectorAll(".content");
+
+  var sliderNav = function(manual){
+    btns.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+
+    contents.forEach((content) => {
+      content.classList.remove("active");
+    });
+
+    btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+
+}
+
+btns.forEach((btn, i) => {
+  btn.addEventListener("click", () => {
+    sliderNav(i);
+  });
+});
+</script>
+
+  </body>
+</html>
+
+
+
+
